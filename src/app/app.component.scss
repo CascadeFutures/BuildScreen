@@ -1,0 +1,13 @@
+.rootWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    &>pks-build-card {
+        padding: 10px;
+       flex-basis: 50%;
+        box-sizing: border-box;
+    }
+
+
+}
+
+

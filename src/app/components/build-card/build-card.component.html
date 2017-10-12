@@ -1,0 +1,38 @@
+<div class="pksBuildCard" *ngIf='buildInfo!==undefined' [ngClass]="{'buildSucess':isSuccess(),'buildFail':isFailure(), 'building': isBuilding()}">
+  <div class="topSection">
+    <div class="info">
+
+      <div class="field">
+        <div class="label">
+          Branch :
+        </div>
+        <div class="value">
+          {{buildInfo.branchName}}
+        </div>
+      </div>
+      <div class="field">
+        <div class="label">
+          Build Number :
+        </div>
+        <div class="value">
+          {{buildInfo.number}}
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="field">
+        <div class="value">
+          {{buildInfo.buildType}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottomSection">
+    <div class="result">{{getBuildStatus() | titleCase}}</div>
+  </div>
+  <div class="resultBar">
+    <div class="progressBar" [ngStyle]="{'width':getProgressPercentage()}" ></div>
+  </div>
+
+</div>

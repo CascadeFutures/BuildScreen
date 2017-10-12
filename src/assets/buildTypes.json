@@ -1,0 +1,353 @@
+{
+    "count": 39,
+    "buildType": [
+        {
+            "id": "bramley_BuildNetAssemblies",
+            "name": "Build - .Net Assemblies",
+            "description": "Builds the .net assemblies",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_BuildNetAssemblies",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_BuildNetAssemblies"
+        },
+        {
+            "id": "bramley_BuildDatabaseScripts",
+            "name": "Build - Database Scripts",
+            "description": "Builds the database scripts (create and update)",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_BuildDatabaseScripts",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_BuildDatabaseScripts"
+        },
+        {
+            "id": "bramley_BuildHrWebsite",
+            "name": "Build - HR Website",
+            "description": "Builds the HR website",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_BuildHrWebsite",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_BuildHrWebsite"
+        },
+        {
+            "id": "bramley_BuildNonHrWebsites",
+            "name": "Build - Non-HR Websites",
+            "description": "Builds the non-HR websites",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_BuildNonHrWebsites",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_BuildNonHrWebsites"
+        },
+        {
+            "id": "bramley_BuildServices",
+            "name": "Build - Services",
+            "description": "Builds the Outlook Integration and Scheduler installers",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_BuildServices",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_BuildServices"
+        },
+        {
+            "id": "bramley_InitiateBuild",
+            "name": "Initiate Build",
+            "description": "Acts as a build start point",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_InitiateBuild",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_InitiateBuild"
+        },
+        {
+            "id": "bramley_PublishToStore",
+            "name": "Publish to Store",
+            "description": "Publish the software to the store",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_PublishToStore",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_PublishToStore"
+        },
+        {
+            "id": "bramley_TestCodeAnalysis",
+            "name": "Test - Code Analysis",
+            "description": "Runs the code analysis checks",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_TestCodeAnalysis",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_TestCodeAnalysis"
+        },
+        {
+            "id": "bramley_TestDatabaseConsistency",
+            "name": "Test - Database Consistency",
+            "description": "Test consistency of new and upgraded databases",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_TestDatabaseConsistency",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_TestDatabaseConsistency"
+        },
+        {
+            "id": "bramley_TestIntegrationTestsPool1",
+            "name": "Test - In Memory Integration Tests (Pool 1)",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_TestIntegrationTestsPool1",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_TestIntegrationTestsPool1"
+        },
+        {
+            "id": "bramley_TestNewDatabase",
+            "name": "Test - New Database",
+            "description": "Test New Database",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_TestNewDatabase",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_TestNewDatabase"
+        },
+        {
+            "id": "bramley_TestUnitTestsPool1",
+            "name": "Test - Unit Tests (Pool 1)",
+            "description": "Runs the unit tests from pool 1",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_TestUnitTestsPool1",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_TestUnitTestsPool1"
+        },
+        {
+            "id": "bramley_TestUnitTestsPool2",
+            "name": "Test - Unit Tests (Pool 2)",
+            "description": "Runs the unit tests from pool 2",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_TestUnitTestsPool2",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_TestUnitTestsPool2"
+        },
+        {
+            "id": "bramley_TestUnitTestsPool3",
+            "name": "Test - Unit Tests (Pool 3)",
+            "description": "Runs the unit tests from pool 3",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_TestUnitTestsPool3",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_TestUnitTestsPool3"
+        },
+        {
+            "id": "bramley_TestUpgradeDatabase",
+            "name": "Test - Upgrade Database",
+            "description": "Test Upgrade Database",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_TestUpgradeDatabase",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_TestUpgradeDatabase"
+        },
+        {
+            "id": "bramley_TestUiHr",
+            "name": "Test UI HR",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_TestUiHr",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_TestUiHr"
+        },
+        {
+            "id": "BuildyMcBuildFace_BuildNetAssemblies",
+            "name": "Build - .Net Assemblies",
+            "description": "Builds the .net assemblies",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_BuildNetAssemblies",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_BuildNetAssemblies"
+        },
+        {
+            "id": "BuildyMcBuildFace_BuildDatabaseScripts",
+            "name": "Build - Database Scripts",
+            "description": "Builds the database scripts (create and update)",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_BuildDatabaseScripts",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_BuildDatabaseScripts"
+        },
+        {
+            "id": "BuildyMcBuildFace_BuildHrWebsite",
+            "name": "Build - HR Website",
+            "description": "Builds the HR website",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_BuildHrWebsite",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_BuildHrWebsite"
+        },
+        {
+            "id": "BuildyMcBuildFace_BuildNonHrWebsites",
+            "name": "Build - Non-HR Websites",
+            "description": "Builds the non-HR websites",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_BuildNonHrWebsites",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_BuildNonHrWebsites"
+        },
+        {
+            "id": "BuildyMcBuildFace_BuildServices",
+            "name": "Build - Services",
+            "description": "Builds the Outlook Integration and Scheduler installers",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_BuildServices",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_BuildServices"
+        },
+        {
+            "id": "BuildyMcBuildFace_InitiateBuild",
+            "name": "Initiate Build",
+            "description": "Acts as a build start point",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_InitiateBuild",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_InitiateBuild"
+        },
+        {
+            "id": "BuildyMcBuildFace_TestCodeAnalysis",
+            "name": "Test - Code Analysis",
+            "description": "Runs the code analysis checks",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_TestCodeAnalysis",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_TestCodeAnalysis"
+        },
+        {
+            "id": "BuildyMcBuildFace_TestDatabaseConsistency",
+            "name": "Test - Database Consistency",
+            "description": "Test consistency of new and upgraded databases",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_TestDatabaseConsistency",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_TestDatabaseConsistency"
+        },
+        {
+            "id": "BuildyMcBuildFace_TestIntegrationTestsPool1",
+            "name": "Test - In Memory Integration Tests (Pool 1)",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_TestIntegrationTestsPool1",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_TestIntegrationTestsPool1"
+        },
+        {
+            "id": "BuildyMcBuildFace_TestNewDatabase",
+            "name": "Test - New Database",
+            "description": "Test New Database",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_TestNewDatabase",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_TestNewDatabase"
+        },
+        {
+            "id": "BuildyMcBuildFace_TestUnitTestsPool1",
+            "name": "Test - Unit Tests (Pool 1)",
+            "description": "Runs the unit tests from pool 1",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_TestUnitTestsPool1",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_TestUnitTestsPool1"
+        },
+        {
+            "id": "BuildyMcBuildFace_TestUnitTestsPool2",
+            "name": "Test - Unit Tests (Pool 2)",
+            "description": "Runs the unit tests from pool 2",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_TestUnitTestsPool2",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_TestUnitTestsPool2"
+        },
+        {
+            "id": "BuildyMcBuildFace_TestUpgradeDatabase",
+            "name": "Test - Upgrade Database",
+            "description": "Test Upgrade Database",
+            "projectName": "BuildyMcBuildFace",
+            "projectId": "BuildyMcBuildFace",
+            "href": "/guestAuth/app/rest/buildTypes/id:BuildyMcBuildFace_TestUpgradeDatabase",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=BuildyMcBuildFace_TestUpgradeDatabase"
+        },
+        {
+            "id": "kraken_BuildNetAssemblies",
+            "name": "Build - .Net Assemblies",
+            "description": "Builds the .net assemblies",
+            "projectName": "Kraken",
+            "projectId": "kraken",
+            "href": "/guestAuth/app/rest/buildTypes/id:kraken_BuildNetAssemblies",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=kraken_BuildNetAssemblies"
+        },
+        {
+            "id": "kraken_BuildDatabaseScripts",
+            "name": "Build - Database Scripts",
+            "description": "Builds the database scripts (create and update)",
+            "projectName": "Kraken",
+            "projectId": "kraken",
+            "href": "/guestAuth/app/rest/buildTypes/id:kraken_BuildDatabaseScripts",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=kraken_BuildDatabaseScripts"
+        },
+        {
+            "id": "kraken_BuildWebsite",
+            "name": "Build - Website",
+            "description": "Builds the website",
+            "projectName": "Kraken",
+            "projectId": "kraken",
+            "href": "/guestAuth/app/rest/buildTypes/id:kraken_BuildWebsite",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=kraken_BuildWebsite"
+        },
+        {
+            "id": "kraken_InitiateBuild",
+            "name": "Initiate Build",
+            "description": "Acts as a build start point",
+            "projectName": "Kraken",
+            "projectId": "kraken",
+            "href": "/guestAuth/app/rest/buildTypes/id:kraken_InitiateBuild",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=kraken_InitiateBuild"
+        },
+        {
+            "id": "kraken_PublishToStore",
+            "name": "Publish to Store",
+            "description": "Publish the software to the store",
+            "projectName": "Kraken",
+            "projectId": "kraken",
+            "href": "/guestAuth/app/rest/buildTypes/id:kraken_PublishToStore",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=kraken_PublishToStore"
+        },
+        {
+            "id": "kraken_TestDatabaseConsistency",
+            "name": "Test - Database Consistency",
+            "description": "Test consistency of new and upgraded databases",
+            "projectName": "Kraken",
+            "projectId": "kraken",
+            "href": "/guestAuth/app/rest/buildTypes/id:kraken_TestDatabaseConsistency",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=kraken_TestDatabaseConsistency"
+        },
+        {
+            "id": "kraken_TestNewDatabase",
+            "name": "Test - New Database",
+            "description": "Test New Database",
+            "projectName": "Kraken",
+            "projectId": "kraken",
+            "href": "/guestAuth/app/rest/buildTypes/id:kraken_TestNewDatabase",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=kraken_TestNewDatabase"
+        },
+        {
+            "id": "kraken_TestUnitTestsPool1",
+            "name": "Test - Unit Tests (Pool 1)",
+            "description": "Runs the unit tests from pool 1",
+            "projectName": "Kraken",
+            "projectId": "kraken",
+            "href": "/guestAuth/app/rest/buildTypes/id:kraken_TestUnitTestsPool1",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=kraken_TestUnitTestsPool1"
+        },
+        {
+            "id": "kraken_TestUpgradeDatabase",
+            "name": "Test - Upgrade Database",
+            "description": "Test Upgrade Database",
+            "projectName": "Kraken",
+            "projectId": "kraken",
+            "href": "/guestAuth/app/rest/buildTypes/id:kraken_TestUpgradeDatabase",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=kraken_TestUpgradeDatabase"
+        },
+        {
+            "id": "alpine_uicontrols",
+            "name": "uicontrols",
+            "description": "Build ui-controls from GitHub",
+            "projectName": "UIControls",
+            "projectId": "Alpine",
+            "href": "/guestAuth/app/rest/buildTypes/id:alpine_uicontrols",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=alpine_uicontrols"
+        }
+    ]
+}

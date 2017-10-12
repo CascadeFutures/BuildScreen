@@ -1,0 +1,215 @@
+{
+    "count": 20,
+    "href": "/guestAuth/app/rest/builds?locator=running:any,branch:branched:any,count:20&ts=15:23:51%20GMT+0100%20(GMT%20Daylight",
+    "nextHref": "/guestAuth/app/rest/builds?locator=count:20,start:20,branch:(branched:any),running:any&ts=15:23:51%20GMT+0100%20(GMT%20Daylight",
+    "build": [
+        {
+            "id": 337845,
+            "buildTypeId": "bramley_InitiateBuild",
+            "number": "23057",
+            "status": "SUCCESS",
+            "state": "running",
+            "running": true,
+            "percentageComplete": 60,
+            "branchName": "chr-2032",
+            "href": "/guestAuth/app/rest/builds/id:337845",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337845&buildTypeId=bramley_InitiateBuild"
+        },
+        {
+            "id": 337505,
+            "buildTypeId": "bramley_TestIntegrationTestsPool1",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "running",
+            "running": true,
+            "percentageComplete": 11,
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337505",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337505&buildTypeId=bramley_TestIntegrationTestsPool1"
+        },
+        {
+            "id": 337504,
+            "buildTypeId": "bramley_TestUnitTestsPool3",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "running",
+            "running": true,
+            "percentageComplete": 71,
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337504",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337504&buildTypeId=bramley_TestUnitTestsPool3"
+        },
+        {
+            "id": 337500,
+            "buildTypeId": "bramley_BuildHrWebsite",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "running",
+            "running": true,
+            "percentageComplete": 48,
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337500",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337500&buildTypeId=bramley_BuildHrWebsite"
+        },
+        {
+            "id": 337503,
+            "buildTypeId": "bramley_TestUnitTestsPool2",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337503",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337503&buildTypeId=bramley_TestUnitTestsPool2"
+        },
+        {
+            "id": 337502,
+            "buildTypeId": "bramley_BuildServices",
+            "number": "5.34.23034",
+            "status": "FAILURE",
+            "state": "finished",
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337502",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337502&buildTypeId=bramley_BuildServices"
+        },
+        {
+            "id": 337501,
+            "buildTypeId": "bramley_TestUnitTestsPool1",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337501",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337501&buildTypeId=bramley_TestUnitTestsPool1"
+        },
+        {
+            "id": 337499,
+            "buildTypeId": "bramley_BuildNonHrWebsites",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337499",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337499&buildTypeId=bramley_BuildNonHrWebsites"
+        },
+        {
+            "id": 337498,
+            "buildTypeId": "bramley_TestCodeAnalysis",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337498",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337498&buildTypeId=bramley_TestCodeAnalysis"
+        },
+        {
+            "id": 337497,
+            "buildTypeId": "bramley_TestNewDatabase",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337497",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337497&buildTypeId=bramley_TestNewDatabase"
+        },
+        {
+            "id": 337496,
+            "buildTypeId": "bramley_TestUpgradeDatabase",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337496",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337496&buildTypeId=bramley_TestUpgradeDatabase"
+        },
+        {
+            "id": 337495,
+            "buildTypeId": "bramley_TestDatabaseConsistency",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337495",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337495&buildTypeId=bramley_TestDatabaseConsistency"
+        },
+        {
+            "id": 337494,
+            "buildTypeId": "bramley_BuildDatabaseScripts",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337494",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337494&buildTypeId=bramley_BuildDatabaseScripts"
+        },
+        {
+            "id": 337493,
+            "buildTypeId": "bramley_BuildNetAssemblies",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337493",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337493&buildTypeId=bramley_BuildNetAssemblies"
+        },
+        {
+            "id": 337492,
+            "buildTypeId": "bramley_InitiateBuild",
+            "number": "5.34.23034",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "release-5.34",
+            "href": "/guestAuth/app/rest/builds/id:337492",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337492&buildTypeId=bramley_InitiateBuild"
+        },
+        {
+            "id": 337491,
+            "buildTypeId": "bramley_PublishToStore",
+            "number": "5.35.23033",
+            "status": "FAILURE",
+            "state": "finished",
+            "branchName": "chr-2179",
+            "href": "/guestAuth/app/rest/builds/id:337491",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337491&buildTypeId=bramley_PublishToStore"
+        },
+        {
+            "id": 337490,
+            "buildTypeId": "bramley_TestUiHr",
+            "number": "5.35.23033",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "chr-2179",
+            "href": "/guestAuth/app/rest/builds/id:337490",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337490&buildTypeId=bramley_TestUiHr"
+        },
+        {
+            "id": 337489,
+            "buildTypeId": "bramley_TestIntegrationTestsPool1",
+            "number": "5.35.23033",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "chr-2179",
+            "href": "/guestAuth/app/rest/builds/id:337489",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337489&buildTypeId=bramley_TestIntegrationTestsPool1"
+        },
+        {
+            "id": 337488,
+            "buildTypeId": "bramley_TestUnitTestsPool3",
+            "number": "5.35.23033",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "chr-2179",
+            "href": "/guestAuth/app/rest/builds/id:337488",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337488&buildTypeId=bramley_TestUnitTestsPool3"
+        },
+        {
+            "id": 337487,
+            "buildTypeId": "bramley_TestUnitTestsPool2",
+            "number": "5.35.23033",
+            "status": "SUCCESS",
+            "state": "finished",
+            "branchName": "chr-2179",
+            "href": "/guestAuth/app/rest/builds/id:337487",
+            "webUrl": "http://tclive:8111/viewLog.html?buildId=337487&buildTypeId=bramley_TestUnitTestsPool2"
+        }
+    ]
+}

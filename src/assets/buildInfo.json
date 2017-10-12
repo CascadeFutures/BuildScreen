@@ -1,0 +1,100 @@
+{
+    "id": 337501,
+    "buildTypeId": "bramley_InitiateBuild",
+    "number": "5.35.23057",
+    "status": "SUCCESS",
+    "state": "finished",
+    "running": true,
+    "percentageComplete": 48,
+    "branchName": "chr-2032",
+    "href": "/guestAuth/app/rest/builds/id:337845",
+    "webUrl": "http://tclive:8111/viewLog.html?buildId=337845&buildTypeId=bramley_InitiateBuild",
+    "statusText": "Success",
+    "buildType": {
+        "id": "bramley_InitiateBuild",
+        "name": "Initiate Build",
+        "description": "Acts as a build start point",
+        "projectName": "Bramley",
+        "projectId": "bramley",
+        "href": "/guestAuth/app/rest/buildTypes/id:bramley_InitiateBuild",
+        "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_InitiateBuild"
+    },
+    "tags": {
+        "tag": []
+    },
+    "queuedDate": "20171012T085624+0100",
+    "startDate": "20171012T085632+0100",
+    "finishDate": "20171012T090018+0100",
+    "triggered": {
+        "type": "buildType",
+        "date": "20171012T085624+0100",
+        "user": {
+            "username": "ftavares",
+            "name": "Fabio Tavares",
+            "id": 55,
+            "href": "/guestAuth/app/rest/users/id:55"
+        },
+        "buildType": {
+            "id": "bramley_PublishToStore",
+            "name": "Publish to Store",
+            "description": "Publish the software to the store",
+            "projectName": "Bramley",
+            "projectId": "bramley",
+            "href": "/guestAuth/app/rest/buildTypes/id:bramley_PublishToStore",
+            "webUrl": "http://tclive:8111/viewType.html?buildTypeId=bramley_PublishToStore"
+        }
+    },
+    "lastChanges": {
+        "count": 1,
+        "change": [
+            {
+                "id": 35112,
+                "version": "dee1a40d539ea6a863476efa5a373f09078bfefb",
+                "username": "stephen cooper",
+                "date": "20171009T083606+0100",
+                "href": "/guestAuth/app/rest/changes/id:35112",
+                "webLink": "http://tclive:8111/viewModification.html?modId=35112&personal=false"
+            }
+        ]
+    },
+    "changes": {
+        "href": "/guestAuth/app/rest/changes?locator=build:(id:337845)"
+    },
+    "revisions": {
+        "revision": [
+            {
+                "version": "c12d9204c3cbfb58abb465b75a729b4beae69f85",
+                "vcs-root-instance": {
+                    "id": "17",
+                    "vcs-root-id": "UAT2",
+                    "name": "UAT2",
+                    "href": "/guestAuth/app/rest/vcs-root-instances/id:17"
+                }
+            }
+        ]
+    },
+    "agent": {
+        "id": 7,
+        "name": "devbuild05",
+        "typeId": 7,
+        "href": "/guestAuth/app/rest/agents/id:7"
+    },
+    "artifacts": {
+        "href": "/guestAuth/app/rest/builds/id:337845/artifacts/children"
+    },
+    "relatedIssues": {
+        "href": "/guestAuth/app/rest/builds/id:337845/relatedIssues"
+    },
+    "attributes": {
+        "count": 1,
+        "entry": [
+            {
+                "name": "teamcity.cleanSources",
+                "value": "true"
+            }
+        ]
+    },
+    "statistics": {
+        "href": "/guestAuth/app/rest/builds/id:337845/statistics"
+    }
+}
