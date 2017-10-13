@@ -3,7 +3,7 @@
     "buildTypeId": "bramley_InitiateBuild",
     "number": "5.35.23057",
     "status": "SUCCESS",
-    "state": "finished",
+    "state": "running",
     "running": true,
     "percentageComplete": 48,
     "branchName": "chr-2032",

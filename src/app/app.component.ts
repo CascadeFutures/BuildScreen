@@ -14,42 +14,57 @@ import { TeamCityService } from './services/team-city.service';
 })
 export class AppComponent implements OnInit {
 
-  buildsId: Array<string>;
+  builds: Array<BuildInfo>;
+  private interval: any;
 
   constructor(private service: TeamCityService) {
 
   }
 
   ngOnInit() {
-    this.buildsId = new Array<string>();
+    this.builds = new Array<BuildInfo>();
+    this.interval = setInterval(() => this.refresh(), 5000);
     this.refresh();
   }
 
   private refresh() {
-    // Promise.all([this.service.getBuild(), this.service.getBuildTypes()]).then(
-    //   results => {
-    //     const builds = results[0];
-    //     const types = results[1];
-
-    //     builds.forEach((build) => {
-    //       const result = _.filter(types, function (type) { return type.id === build.buildTypeId; });
-    //       if (result.length > 0) {
-    //         build.buildType = result[0].name;
-    //       }
-    //     });
-
-    //     this.totalBuilds = builds;
-    //     this.buildTypes = types;
-
-    //   });
-
     this.service.getBuild().then((data) => {
-     data.forEach((id) => {
-        if (this.buildsId.indexOf(id) === -1) {
-          this.buildsId.push(id);
+      data.forEach((build) => {
+        if (this.builds.findIndex((obj) => obj.id === build.id) === -1) {
+          this.builds.push(build);
         }
       });
+
+      this.builds = this.applySort();
     });
+  }
+
+
+  private applySort() {
+    console.log('****************************** sorted ******************************');
+    return this.builds.sort((buildA, buildB) => {
+
+      if (buildA.state === 'running' && buildB.state === 'running') {
+        return +buildB.percentageComplete - +buildA.percentageComplete;
+      }
+
+      if (buildA.state === 'running' && buildB.state !== 'running') {
+        return -1;
+      }
+
+      if (buildA.state !== 'running' && buildB.state === 'running') {
+        return 1;
+      }
+      return +buildA.id - +buildB.id;
+    });
+
+  }
+
+  private updateState(build: BuildInfo, state: string) {
+    if (build) {
+      build.state = state;
+      this.builds = this.applySort();
+    }
   }
 
 

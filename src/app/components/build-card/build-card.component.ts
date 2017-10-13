@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { BuildInfo } from '../../models/buildInfo.model';
 
@@ -12,18 +12,22 @@ import { TeamCityService } from '../../services/team-city.service';
 export class BuildCardComponent implements OnInit {
 
   @Input() buildId: string;
+  @Output() onState = new EventEmitter<string>();
 
   private interval: any;
 
   public buildInfo: BuildInfo;
+  public val: number;
 
   constructor(private service: TeamCityService) {
     this.buildInfo = new BuildInfo();
+    this.val = Math.random() * 100;
   }
 
   ngOnInit() {
     this.refresh();
     this.interval = setInterval(() => this.refresh(), 5000);
+    console.log('changed');
   }
 
   private refresh(): void {
@@ -45,14 +49,16 @@ export class BuildCardComponent implements OnInit {
           payload.status,
           payload.state,
           payload.running,
-          '' + Math.floor(Math.random() * 100),
-          // payload.percentageComplete,
+          // '' + Math.floor(Math.random() * 100),
+          payload.percentageComplete,
           payload.branchName,
           payload.href,
           payload.webUrl,
           payload.buildType
         );
       }
+
+      this.onState.emit(this.buildInfo.state);
 
       if (!this.isBuilding()) {
         clearInterval(this.interval);
@@ -87,5 +93,7 @@ export class BuildCardComponent implements OnInit {
     if (!this.buildInfo) { return ''; }
     return `${this.buildInfo.percentageComplete}%`;
   }
+
+
 
 }
