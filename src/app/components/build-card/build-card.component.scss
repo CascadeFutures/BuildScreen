@@ -1,14 +1,12 @@
 @import './../../../colours.scss';
-
-$heigth : 150px;
+$heigth: 150px;
 $topSectionHeigth: $heigth * 0.5;
 $bottonSectionHeigth: $heigth * 0.45;
-$resultBar:  $heigth * 0.05;
+$resultBar: $heigth * 0.05;
 $resultFontSize: $heigth * 0.45;
 $fieldFontSize: $heigth * 0.20;
-$resultBottom:  $heigth * -0.15;
-$fieldTopPadding:  $heigth * 0.05;
-
+$resultBottom: $heigth * -0.15;
+$fieldTopPadding: $heigth * 0.05;
 .pksBuildCard {
     background-color: $card-background;
     height: $heigth;
@@ -75,13 +73,14 @@ $fieldTopPadding:  $heigth * 0.05;
         }
     }
     &>.resultBar {
-        background-color:$sucess;
+        background-color: $sucess;
     }
 }
 
 .buildFail {
     &>.bottomSection {
         &>.result {
+            animation: blink 1s infinite alternate;
             color: $failure;
         }
     }
@@ -100,7 +99,7 @@ $fieldTopPadding:  $heigth * 0.05;
         background-color: #000000;
         &>.progressBar {
             height: 100%;
-            background: repeating-linear-gradient( 45deg, $building, $building 10px, darken($building, 15%) 10px, darken( $building, 15%)  20px);
+            background: repeating-linear-gradient( 45deg, $building, $building 10px, darken($building, 15%) 10px, darken( $building, 15%) 20px);
             background-size: 200% 200%;
             animation: ProgressBarAnimation;
             animation-duration: 10s;
@@ -120,5 +119,14 @@ $fieldTopPadding:  $heigth * 0.05;
     }
     100% {
         background-position: -100% 0%
+    }
+}
+
+@keyframes blink {
+    0% {
+        color:darkred;
+    }
+    100% {
+        color:red;
     }
 }

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {  TitleCasePipe} from './pipes/title-case.pipe';
 
@@ -19,7 +20,8 @@ import { TeamCityService } from './services/team-city.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [TeamCityService],
   bootstrap: [AppComponent]

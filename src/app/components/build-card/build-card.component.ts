@@ -1,33 +1,34 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter,} from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 import { BuildInfo } from '../../models/buildInfo.model';
 
 import { TeamCityService } from '../../services/team-city.service';
 
+
+
 @Component({
   selector: 'pks-build-card',
   templateUrl: './build-card.component.html',
-  styleUrls: ['./build-card.component.scss']
+  styleUrls: ['./build-card.component.scss'],
+
 })
 export class BuildCardComponent implements OnInit {
 
   @Input() buildId: string;
-  @Output() onState = new EventEmitter<string>();
+  @Output() onChange = new EventEmitter<BuildInfo>();
 
   private interval: any;
 
   public buildInfo: BuildInfo;
-  public val: number;
 
   constructor(private service: TeamCityService) {
     this.buildInfo = new BuildInfo();
-    this.val = Math.random() * 100;
   }
 
   ngOnInit() {
     this.refresh();
     this.interval = setInterval(() => this.refresh(), 5000);
-    console.log('changed');
   }
 
   private refresh(): void {
@@ -58,10 +59,11 @@ export class BuildCardComponent implements OnInit {
         );
       }
 
-      this.onState.emit(this.buildInfo.state);
+      this.onChange.emit(this.buildInfo);
 
       if (!this.isBuilding()) {
         clearInterval(this.interval);
+        this.buildInfo.state = 'finished';
       }
 
     });
