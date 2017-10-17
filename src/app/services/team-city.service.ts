@@ -30,7 +30,7 @@ export class TeamCityService {
     headers.append('Content-Type', 'application/json');
     const options = { headers: headers };
 
-    const url = `${this.apiBaseUrl}/?locator=running:any,branch:branched:any,count:20&ts=15:23:51%20GMT+0100%20(GMT%20Daylight`;
+    const url = `${this.apiBaseUrl}/?locator=running:any,branch:branched:any,count:1&ts=15:23:51%20GMT+0100%20(GMT%20Daylight`;
 
     return this.http.get(url)
       .map(data => {

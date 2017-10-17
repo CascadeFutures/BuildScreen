@@ -1,29 +1,30 @@
-<div class="pksBuildCard" *ngIf='buildInfo!==undefined'   [ngClass]="{'buildSucess':isSuccess(),'buildFail':isFailure(), 'building': isBuilding()}">
+<div class="pksBuildCard" *ngIf='buildInfo!==undefined' [ngClass]="{'buildSucess':isSuccess(),'buildFail':isFailure(), 'building': isBuilding()}">
   <div class="topSection">
     <div class="info">
 
       <div class="field">
         <div class="label">
-          Branch :
+          <pks-responsive-text [ratio]="0.03" [referenceSize]="selfWidth">Branch :</pks-responsive-text>
+
         </div>
         <div class="value">
-          {{buildInfo.branchName}}
+          <pks-responsive-text [ratio]="0.03" [referenceSize]="selfWidth">{{buildInfo.branchName}}</pks-responsive-text>
         </div>
       </div>
       <div class="field">
         <div class="label">
-          Build Number :
+          <pks-responsive-text [ratio]="0.03" [referenceSize]="selfWidth">Build Number :</pks-responsive-text>
         </div>
         <div class="value">
-          {{buildInfo.number}}
+            <pks-responsive-text [ratio]="0.03" [referenceSize]="selfWidth">{{buildInfo.number}}</pks-responsive-text>
         </div>
       </div>
     </div>
     <div class="info">
       <div class="field">
         <div class="value">
-          {{buildInfo.id}}
-         </div>
+          <pks-responsive-text [ratio]="0.03" [referenceSize]="selfWidth"> {{buildInfo.buildType}}</pks-responsive-text>
+        </div>
       </div>
     </div>
   </div>

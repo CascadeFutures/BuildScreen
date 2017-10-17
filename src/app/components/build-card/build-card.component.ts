@@ -1,11 +1,13 @@
-import { Component, OnInit, Input, Output, EventEmitter,} from '@angular/core';
+import {
+  Component,
+  OnInit, OnDestroy, Input, Output, EventEmitter, ElementRef, ChangeDetectorRef
+} from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 import { BuildInfo } from '../../models/buildInfo.model';
 
 import { TeamCityService } from '../../services/team-city.service';
-
-
+import { ResizeService } from '../../services/resize/resize.service';
 
 @Component({
   selector: 'pks-build-card',
@@ -13,7 +15,7 @@ import { TeamCityService } from '../../services/team-city.service';
   styleUrls: ['./build-card.component.scss'],
 
 })
-export class BuildCardComponent implements OnInit {
+export class BuildCardComponent implements OnInit, OnDestroy {
 
   @Input() buildId: string;
   @Output() onChange = new EventEmitter<BuildInfo>();
@@ -22,13 +24,40 @@ export class BuildCardComponent implements OnInit {
 
   public buildInfo: BuildInfo;
 
-  constructor(private service: TeamCityService) {
+  selfWidth: number;
+
+  private resizeTimeout: any;
+
+  constructor(private service: TeamCityService,
+    private el: ElementRef,
+    private resizeService: ResizeService,
+    private changeDetectorRef: ChangeDetectorRef) {
+
     this.buildInfo = new BuildInfo();
+    this.selfWidth = 0;
   }
 
   ngOnInit() {
     this.refresh();
     this.interval = setInterval(() => this.refresh(), 5000);
+    this.setEvent();
+  }
+
+
+  ngOnDestroy() {
+    this.resizeService.removeResizeEventListener(this.el.nativeElement);
+  }
+
+
+  private setEvent() {
+    this.resizeService.addResizeEventListener(this.el.nativeElement, (elem) => {
+      clearInterval(this.resizeTimeout);
+      this.resizeTimeout = setTimeout(() => {
+        console.log('resize');
+        this.selfWidth = this.el.nativeElement.offsetWidth;
+        this.changeDetectorRef.detectChanges();
+      }, 500);
+    });
   }
 
   private refresh(): void {
@@ -95,7 +124,5 @@ export class BuildCardComponent implements OnInit {
     if (!this.buildInfo) { return ''; }
     return `${this.buildInfo.percentageComplete}%`;
   }
-
-
 
 }
