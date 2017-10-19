@@ -23,7 +23,6 @@ export class ResponsiveTextComponent implements OnChanges {
     const refSize = changes.referenceSize !== undefined ? changes.referenceSize.currentValue : this.referenceSize;
     const multiple = changes.ratio !== undefined ? changes.ratio.currentValue : this.ratio;
     this.fontSize = `${refSize * multiple}px`;
-    console.log('changes');
   }
 
 

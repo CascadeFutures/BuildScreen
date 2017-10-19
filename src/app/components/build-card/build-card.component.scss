@@ -8,7 +8,8 @@ $fieldFontSize: $heigth * 0.20;
 $resultBottom: $heigth * -0.15;
 $fieldTopPadding: $heigth * 0.05;
 .pksBuildCard {
-    background-color: $card-background;
+    font-family: 'Inconsolata', sans-serif;
+    background: $card-background;
     height: $heigth;
     width: 100%;
     border: 2px solid $assent;
@@ -28,7 +29,9 @@ $fieldTopPadding: $heigth * 0.05;
             display: flex;
             flex-direction: column; //
             padding: $fieldTopPadding 10px;
+            max-width: 50%;
             &>.field {
+                margin-bottom: 10px;
                 font-size: $fieldFontSize;
                 padding: 10px 0;
                 display: flex;
@@ -52,11 +55,14 @@ $fieldTopPadding: $heigth * 0.05;
         height: $bottonSectionHeigth;
         position: relative;
         &>.result {
-            font-family: 'Mogra', cursive;
-            font-size: $resultFontSize;
+            &>* {
+                font-family: 'Mogra', cursive;
+                font-weight: bolder;
+            }
             position: absolute;
             right: 0px;
-            bottom: $resultBottom;
+            bottom:0px;
+            margin-bottom: -12.5px;
         }
     }
     &>.resultBar {
@@ -64,6 +70,10 @@ $fieldTopPadding: $heigth * 0.05;
         width: 100%;
         border-top: 1px solid black;
     }
+}
+
+.textOnTheRight {
+    text-align: right;
 }
 
 .buildSucess {
@@ -80,7 +90,7 @@ $fieldTopPadding: $heigth * 0.05;
 .buildFail {
     &>.bottomSection {
         &>.result {
-            animation: blink 1s infinite alternate;
+            animation: blinkColor 1s infinite alternate;
             color: $failure;
         }
     }
@@ -97,36 +107,6 @@ $fieldTopPadding: $heigth * 0.05;
     }
     &>.resultBar {
         background-color: #000000;
-        &>.progressBar {
-            height: 100%;
-            background: repeating-linear-gradient( 45deg, $building, $building 10px, darken($building, 15%) 10px, darken( $building, 15%) 20px);
-            background-size: 200% 200%;
-            animation: ProgressBarAnimation;
-            animation-duration: 10s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            transition: width 1s ease;
-        }
     }
 }
 
-@keyframes ProgressBarAnimation {
-    0% {
-        background-position: 100% 0%
-    }
-    50% {
-        background-position: 0% 0%
-    }
-    100% {
-        background-position: -100% 0%
-    }
-}
-
-@keyframes blink {
-    0% {
-        color:darkred;
-    }
-    100% {
-        color:red;
-    }
-}

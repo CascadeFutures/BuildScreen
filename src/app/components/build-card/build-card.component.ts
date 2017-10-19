@@ -20,6 +20,9 @@ export class BuildCardComponent implements OnInit, OnDestroy {
   @Input() buildId: string;
   @Output() onChange = new EventEmitter<BuildInfo>();
 
+  private fieldRatio = 0.03;
+  private resultRatio = 0.073;
+
   private interval: any;
 
   public buildInfo: BuildInfo;
@@ -53,7 +56,6 @@ export class BuildCardComponent implements OnInit, OnDestroy {
     this.resizeService.addResizeEventListener(this.el.nativeElement, (elem) => {
       clearInterval(this.resizeTimeout);
       this.resizeTimeout = setTimeout(() => {
-        console.log('resize');
         this.selfWidth = this.el.nativeElement.offsetWidth;
         this.changeDetectorRef.detectChanges();
       }, 500);
@@ -79,7 +81,6 @@ export class BuildCardComponent implements OnInit, OnDestroy {
           payload.status,
           payload.state,
           payload.running,
-          // '' + Math.floor(Math.random() * 100),
           payload.percentageComplete,
           payload.branchName,
           payload.href,

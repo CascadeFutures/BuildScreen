@@ -1,31 +1,31 @@
 .rootWrapper {
     display: flex;
-    flex-wrap: wrap;
- //   background-color: pink;
-    &>pks-build-card {
-        padding: 10px;
-        flex-basis: 50%;
-        box-sizing: border-box;
-        
-     //   animation: MyAnimation 2s;
+    flex-direction: column;
+    &>pks-top-bar {
+        position: fixed;
+        z-index: 1;
+        width: 100%;
     }
-}
-
-
-@media  (max-width: 1023px) {
-    .rootWrapper {
-     //   background-color: red;
+    &>.cards {
+        position: absolute;
+        top: 50px;
+        z-index: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
         &>pks-build-card {
-        flex-basis: 100%;
+            flex-basis: 50%;
+            box-sizing: border-box;
+            padding: 10px;
         }
     }
 }
 
-// @media (min-width: 1024px) and (max-width: 1600px) {
-//     .rootWrapper {
-//       //  background-color: green;
-//         &>pks-build-card {
-//             flex-basis: 50%;
-//         }
-//     }
-// }
+@media (max-width: 1023px) {
+    .rootWrapper {
+        &>.cards {
+        &>pks-build-card {
+            flex-basis: 100%;
+        }      }
+    }
+}

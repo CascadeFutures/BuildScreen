@@ -1,6 +1,9 @@
-<div class="rootWrapper"  >
- 
-<pks-build-card   *ngFor="let build of builds,  let newIndex = index" [buildId]="build.id" [@indexChange] (onChange)="onChange($event)" > </pks-build-card>
+<div class="rootWrapper">
 
-
+    <pks-top-bar></pks-top-bar>
+    
+    <div class="cards">
+        <pks-build-card *ngFor="let build of builds,  let newIndex = index" [buildId]="build.id" [@indexChange] (onChange)="onChange($event)">
+        </pks-build-card>
+    </div>
 </div>

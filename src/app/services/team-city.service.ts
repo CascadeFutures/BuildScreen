@@ -16,11 +16,11 @@ export class TeamCityService {
   // apiBaseUrl = 'http://buildscreen/proxy-aspnet.ashx?url=http://tclive:8111/guestAuth/app/rest';
   // apiUrl = `${this.apiBaseUrl}/builds/branch:develop,running:any,canceled:any&ts=12:48:32%20GMT+0100%20(GMT%20Daylight%20Time)`;
 
-  apiBaseUrl = 'http://localhost:3000?url=/guestAuth/app/rest/builds';
+  apiBaseUrl = 'http://localhost:3001?url=/guestAuth/app/rest/builds';
 
-  testDataUrl = './assets/data.json';
-  testTypesUrl = './assets/buildTypes.json';
-  testBuildUrl = './assets/buildInfo.json';
+  // testDataUrl = './assets/data.json';
+  // testTypesUrl = './assets/buildTypes.json';
+  // testBuildUrl = './assets/buildInfo.json';
 
   constructor(private http: HttpClient) { }
 
@@ -30,8 +30,8 @@ export class TeamCityService {
     headers.append('Content-Type', 'application/json');
     const options = { headers: headers };
 
-    const url = `${this.apiBaseUrl}/?locator=running:any,branch:branched:any,count:1&ts=15:23:51%20GMT+0100%20(GMT%20Daylight`;
-
+    // const url = `${this.apiBaseUrl}/?locator=running:any,branch:branched:any,count:20&ts=15:23:51%20GMT+0100%20(GMT%20Daylight`;
+    const url = `${this.apiBaseUrl}/?locator=running:any,branch:branched:any,count:20`;
     return this.http.get(url)
       .map(data => {
         return JSON.parse(JSON.stringify(data)).build;
@@ -82,4 +82,40 @@ export class TeamCityService {
       })
       .toPromise();
   }
+
+
+  public getLastDevelopBuild(): Promise<BuildInfo> {
+
+    const url = `${this.apiBaseUrl}?locator=branch:develop,running:false,canceled:any,buildType:bramley_PublishToStore,count:1`;
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+
+    const options = { headers: headers };
+
+    return this.http.get(url)
+      .map(data => {
+        return JSON.parse(JSON.stringify(data)).build;
+      })
+      .map(builds => {
+        return builds.length > 0 ? builds[0] : [];
+      })
+      .map(build => {
+        return new BuildInfo(
+          build.id,
+          build.buildTypeId,
+          build.number,
+          build.status,
+          build.state,
+          // 'running',
+          build.running,
+          build.percentageComplete,
+          // '75' ,
+          build.branchName,
+          build.href,
+          build.webUrl
+        );
+      })
+      .toPromise();
+  }
+
 }

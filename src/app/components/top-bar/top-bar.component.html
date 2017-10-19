@@ -1,0 +1,11 @@
+<div class="pks-top-bar_wrapper"  [ngClass]="{'buildSucess':isSuccess(),'buildFail':isFailure(), 'building': isBuilding()}">
+    <div class="buildInfo">
+        <div class="buildName">{{buildInfo.branchName | titleCase }} Branch</div>
+        <div class="buildStatus"> {{getBuildStatus() | titleCase}}</div>
+    </div>
+
+    <div class="resultBar">
+        <div class="progressBar" *ngIf='isBuilding()'  [ngStyle]="{'width':getProgressPercentage()}"></div>
+    </div>
+
+</div>

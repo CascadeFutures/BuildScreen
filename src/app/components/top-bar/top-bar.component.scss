@@ -1,0 +1,53 @@
+@import './../../../colours.scss';
+.pks-top-bar_wrapper {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    font-family: 'Inconsolata', sans-serif;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000; // overflow: hidden;
+    font-size: 24px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    &>.buildInfo {
+        padding: 0 10px;
+        display: flex;
+        flex-direction: row;
+        &>*:first-of-type {
+            margin-right: 10px;
+        }
+    }
+    &>.resultBar {
+        position: absolute;
+        bottom: 0px;
+        height: 5px;
+        width: 100%;
+        border-top: 0.5px solid black;
+    }
+}
+
+.buildSucess {
+    background-color: $sucess;
+    &>.resultBar {
+        display:none;
+    }
+}
+
+.buildFail {
+    animation: blinkBackground 1s infinite alternate;
+    //background-color: $failure;
+    &>.resultBar {
+        display:none;
+    }
+}
+
+.building {
+    background-color:  darken($building, 15%);
+
+    &>.resultBar {
+        display: block;
+        background-color: #000000;
+    }
+}

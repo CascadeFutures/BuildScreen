@@ -4,33 +4,35 @@
 
       <div class="field">
         <div class="label">
-          <pks-responsive-text [ratio]="0.03" [referenceSize]="selfWidth">Branch :</pks-responsive-text>
+          <pks-responsive-text [ratio]="fieldRatio" [referenceSize]="selfWidth">Branch :</pks-responsive-text>
 
         </div>
         <div class="value">
-          <pks-responsive-text [ratio]="0.03" [referenceSize]="selfWidth">{{buildInfo.branchName}}</pks-responsive-text>
+          <pks-responsive-text [ratio]="fieldRatio" [referenceSize]="selfWidth">{{buildInfo.branchName}}</pks-responsive-text>
         </div>
       </div>
       <div class="field">
         <div class="label">
-          <pks-responsive-text [ratio]="0.03" [referenceSize]="selfWidth">Build Number :</pks-responsive-text>
+          <pks-responsive-text [ratio]="fieldRatio" [referenceSize]="selfWidth">Build Number :</pks-responsive-text>
         </div>
         <div class="value">
-            <pks-responsive-text [ratio]="0.03" [referenceSize]="selfWidth">{{buildInfo.number}}</pks-responsive-text>
+          <pks-responsive-text [ratio]="fieldRatio" [referenceSize]="selfWidth">{{buildInfo.number}}</pks-responsive-text>
         </div>
       </div>
     </div>
-    <div class="info">
+    <div class="info textOnTheRight">
       <div class="field">
         <div class="value">
-          <pks-responsive-text [ratio]="0.03" [referenceSize]="selfWidth"> {{buildInfo.buildType}}</pks-responsive-text>
+          <pks-responsive-text [ratio]="fieldRatio" [referenceSize]="selfWidth"> {{buildInfo.buildType}}</pks-responsive-text>
         </div>
       </div>
     </div>
   </div>
 
   <div class="bottomSection">
-    <div class="result">{{getBuildStatus() | titleCase}}</div>
+    <div class="result">
+      <pks-responsive-text [ratio]="resultRatio" [referenceSize]="selfWidth"> {{getBuildStatus() | titleCase}}</pks-responsive-text>
+    </div>
   </div>
   <div class="resultBar">
     <div class="progressBar" [ngStyle]="{'width':getProgressPercentage()}"></div>

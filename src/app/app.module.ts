@@ -11,13 +11,15 @@ import { ResizeService } from './services/resize/resize.service';
 import { AppComponent } from './app.component';
 import { BuildCardComponent } from './components/build-card/build-card.component';
 import { ResponsiveTextComponent } from './components/responsive-text/responsive-text.component';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BuildCardComponent,
     TitleCasePipe,
-    ResponsiveTextComponent
+    ResponsiveTextComponent,
+    TopBarComponent,
   ],
   imports: [
     BrowserModule,

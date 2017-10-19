@@ -1,8 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
-
-* {
-    // font-family: 'Roboto', sans-serif;
-
-    font-family: 'Ubuntu Condensed', sans-serif;
-
+@import './colours.scss';
+body {
+    margin: 0;
 }
+
+.building {
+    &>.resultBar>.progressBar {
+        height: 100%;
+        background: repeating-linear-gradient( 45deg, $building, $building 10px, darken($building, 15%) 10px, darken( $building, 15%) 20px);
+        background-size: 300% 300%;
+        animation: ProgressBarAnimation;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transition: width 1s ease;
+    }
+}
+
+@keyframes ProgressBarAnimation {
+    0% {
+        background-position: 100% 100%
+    }
+    50% {
+        background-position: 0% 0%
+    }
+    100% {
+        background-position: -100% 100%
+    }
+}
+
+
+@keyframes blinkColor {
+    0% {
+        color: darkred;
+    }
+    100% {
+        color: red;
+    }
+}
+
+@keyframes blinkBackground {
+    0% {
+        background-color: darkred;
+    }
+    100% {
+        background-color: red;
+    }
+}
+
