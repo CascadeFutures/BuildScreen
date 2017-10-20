@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: center;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-bottom: 1px solid #000000;
     &>.buildInfo {
         padding: 0 10px;
         display: flex;
@@ -26,6 +27,13 @@
         width: 100%;
         border-top: 0.5px solid black;
     }
+    &>pks-search-box
+    {
+        position: absolute;
+        right: 10px;
+        width: 150px;
+
+    }
 }
 
 .buildSucess {
@@ -36,8 +44,14 @@
 }
 
 .buildFail {
-    animation: blinkBackground 1s infinite alternate;
-    //background-color: $failure;
+    animation: blinkBackgroundRed 1s infinite alternate;
+    &>.resultBar {
+        display:none;
+    }
+}
+
+.statusUnknonwn {
+    animation: blinkBackgroundYellow 1s infinite alternate;
     &>.resultBar {
         display:none;
     }

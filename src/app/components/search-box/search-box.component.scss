@@ -1,0 +1,28 @@
+.pks-search-box_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    &>input {
+        position: absolute;
+        height: 25px;
+        line-height: 25px;
+        width: 100%;
+        background-color: #dfdfdf;
+        color: black;
+        border: 0;
+
+        border-radius: 25px;
+        padding: 0 25px 0 10px;
+        box-sizing: border-box;
+        &:focus {
+            outline: none;
+        }
+    }
+    img {
+        position: absolute;
+        height: 20px;
+        right: 5px;
+        cursor:pointer;
+    }
+}

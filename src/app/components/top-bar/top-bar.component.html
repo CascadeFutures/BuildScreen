@@ -1,11 +1,13 @@
-<div class="pks-top-bar_wrapper"  [ngClass]="{'buildSucess':isSuccess(),'buildFail':isFailure(), 'building': isBuilding()}">
+<div class="pks-top-bar_wrapper" [ngClass]="{'buildSucess':isSuccess(),'buildFail':isFailure(), 'building': isBuilding(), 'statusUnknonwn': isUnknown()}">
     <div class="buildInfo">
         <div class="buildName">{{buildInfo.branchName | titleCase }} Branch</div>
         <div class="buildStatus"> {{getBuildStatus() | titleCase}}</div>
     </div>
 
     <div class="resultBar">
-        <div class="progressBar" *ngIf='isBuilding()'  [ngStyle]="{'width':getProgressPercentage()}"></div>
+        <div class="progressBar" *ngIf='isBuilding()' [ngStyle]="{'width':getProgressPercentage()}"></div>
     </div>
+
+    <pks-search-box (onSearch)="callback($event)"></pks-search-box>
 
 </div>

@@ -1,11 +1,9 @@
 @import './../../../colours.scss';
-$heigth: 150px;
+$heigth: 125px;
 $topSectionHeigth: $heigth * 0.5;
 $bottonSectionHeigth: $heigth * 0.45;
 $resultBar: $heigth * 0.05;
-$resultFontSize: $heigth * 0.45;
 $fieldFontSize: $heigth * 0.20;
-$resultBottom: $heigth * -0.15;
 $fieldTopPadding: $heigth * 0.05;
 .pksBuildCard {
     font-family: 'Inconsolata', sans-serif;
@@ -27,7 +25,7 @@ $fieldTopPadding: $heigth * 0.05;
         &>.info {
             color: #FFFFFF;
             display: flex;
-            flex-direction: column; //
+            flex-direction: column; 
             padding: $fieldTopPadding 10px;
             max-width: 50%;
             &>.field {
@@ -61,8 +59,8 @@ $fieldTopPadding: $heigth * 0.05;
             }
             position: absolute;
             right: 0px;
-            bottom:0px;
-            margin-bottom: -12.5px;
+            bottom:-25px;
+           
         }
     }
     &>.resultBar {

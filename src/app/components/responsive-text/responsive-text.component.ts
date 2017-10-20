@@ -25,7 +25,4 @@ export class ResponsiveTextComponent implements OnChanges {
     this.fontSize = `${refSize * multiple}px`;
   }
 
-
-
-
 }

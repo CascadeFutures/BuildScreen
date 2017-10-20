@@ -21,7 +21,7 @@ export class BuildCardComponent implements OnInit, OnDestroy {
   @Output() onChange = new EventEmitter<BuildInfo>();
 
   private fieldRatio = 0.03;
-  private resultRatio = 0.073;
+  private resultRatio = 0.06;
 
   private interval: any;
 
@@ -36,7 +36,6 @@ export class BuildCardComponent implements OnInit, OnDestroy {
     private resizeService: ResizeService,
     private changeDetectorRef: ChangeDetectorRef) {
 
-    this.buildInfo = new BuildInfo();
     this.selfWidth = 0;
   }
 
@@ -46,19 +45,21 @@ export class BuildCardComponent implements OnInit, OnDestroy {
     this.setEvent();
   }
 
-
   ngOnDestroy() {
     this.resizeService.removeResizeEventListener(this.el.nativeElement);
   }
 
+  private isReady(): boolean {
+    return this.buildInfo !== undefined && this.buildInfo !== null;
+  }
 
   private setEvent() {
     this.resizeService.addResizeEventListener(this.el.nativeElement, (elem) => {
-      clearInterval(this.resizeTimeout);
-      this.resizeTimeout = setTimeout(() => {
-        this.selfWidth = this.el.nativeElement.offsetWidth;
-        this.changeDetectorRef.detectChanges();
-      }, 500);
+      // clearInterval(this.resizeTimeout);
+      //  this.resizeTimeout = setTimeout(() => {
+      this.selfWidth = this.el.nativeElement.offsetWidth;
+      // this.changeDetectorRef.detectChanges();
+      // }, 0);
     });
   }
 

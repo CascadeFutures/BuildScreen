@@ -1,6 +1,10 @@
 @import './colours.scss';
 body {
     margin: 0;
+    // overflow: hidden;
+    // &:hover{
+    //     overflow: auto;
+    // }
 }
 
 .building {
@@ -38,12 +42,21 @@ body {
     }
 }
 
-@keyframes blinkBackground {
+@keyframes blinkBackgroundRed {
     0% {
         background-color: darkred;
     }
     100% {
         background-color: red;
+    }
+}
+
+@keyframes blinkBackgroundYellow {
+    0% {
+        background-color: darken($building, 15%);
+    }
+    100% {
+        background-color:  $building;
     }
 }
 

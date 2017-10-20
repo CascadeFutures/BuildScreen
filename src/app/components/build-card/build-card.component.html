@@ -1,4 +1,4 @@
-<div class="pksBuildCard" *ngIf='buildInfo!==undefined' [ngClass]="{'buildSucess':isSuccess(),'buildFail':isFailure(), 'building': isBuilding()}">
+<div class="pksBuildCard" *ngIf='isReady()' [ngClass]="{'buildSucess':isSuccess(),'buildFail':isFailure(), 'building': isBuilding()}">
   <div class="topSection">
     <div class="info">
 
@@ -30,7 +30,7 @@
   </div>
 
   <div class="bottomSection">
-    <div class="result">
+    <div class="result" >
       <pks-responsive-text [ratio]="resultRatio" [referenceSize]="selfWidth"> {{getBuildStatus() | titleCase}}</pks-responsive-text>
     </div>
   </div>

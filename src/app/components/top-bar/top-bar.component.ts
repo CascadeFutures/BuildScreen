@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { BuildInfo } from '../../models/buildInfo.model';
 
@@ -13,24 +13,20 @@ export class TopBarComponent implements OnInit {
 
   public buildInfo: BuildInfo;
 
+  @Output() onSearch = new EventEmitter<string>();
 
   constructor(private service: TeamCityService) {
-
     this.buildInfo = new BuildInfo();
-
   }
 
   ngOnInit() {
-     setInterval(() => this.refresh(), 5000);
-    // this.refresh();
+    setInterval(() => this.refresh(), 5000);
+    this.refresh();
   }
-
-
 
   private refresh(): void {
 
     this.service.getLastDevelopBuild().then((payload) => {
-      // console.log(payload);
       this.buildInfo = new BuildInfo(
         payload.id,
         payload.buildTypeId,
@@ -44,12 +40,6 @@ export class TopBarComponent implements OnInit {
         payload.webUrl,
         payload.buildType
       );
-
-      // if (!this.isBuilding()) {
-      //   clearInterval(this.interval);
-      //   this.buildInfo.state = 'finished';
-      // }
-
     });
   }
 
@@ -70,17 +60,27 @@ export class TopBarComponent implements OnInit {
     return this.buildInfo.state === 'running';
   }
 
+  public isUnknown(): boolean {
+    if (!this.buildInfo) { return false; }
+    return this.buildInfo.status === 'UNKNOWN';
+  }
+
   public getBuildStatus(): string {
     if (!this.buildInfo) { return ''; }
     if (this.isFailure()) { return 'Build FAILURE'; }
     if (this.isSuccess()) { return 'Build SUCCESS'; }
+    if (this.isUnknown()) { return 'Status Unknown'; }
     if (this.isBuilding()) { return `Building ${this.getProgressPercentage()}`; }
   }
 
   public getProgressPercentage(): string {
     if (!this.buildInfo) { return ''; }
-    console.log(this.buildInfo.percentageComplete);
     return `${this.buildInfo.percentageComplete}%`;
   }
+
+  public callback(event) {
+    this.onSearch.emit(event);
+  }
+
 
 }

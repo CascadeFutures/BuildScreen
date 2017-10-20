@@ -1,9 +1,8 @@
 <div class="rootWrapper">
 
-    <pks-top-bar></pks-top-bar>
-    
-    <div class="cards">
-        <pks-build-card *ngFor="let build of builds,  let newIndex = index" [buildId]="build.id" [@indexChange] (onChange)="onChange($event)">
+    <pks-top-bar (onSearch)="callback($event)"></pks-top-bar>
+    <div class="cards" *ngIf="builds.length!=0">
+        <pks-build-card   *ngFor="let build of builds,  let newIndex = index" [buildId]="build.id" [@indexChange] (onChange)="onChange($event)">
         </pks-build-card>
     </div>
 </div>
