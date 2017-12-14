@@ -72,7 +72,7 @@ export class AppComponent implements OnInit {
 
   private processData(builds: Array<BuildInfo>) {
     builds.forEach((build) => {
-      if (this.builds.findIndex((obj) => obj.id === build.id) === -1) {
+      if (build !== undefined && build !== null && this.builds.findIndex((obj) => obj.id === build.id) === -1) {
         this.builds.push(build);
       }
     });
