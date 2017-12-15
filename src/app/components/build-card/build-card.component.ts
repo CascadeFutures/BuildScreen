@@ -49,7 +49,7 @@ export class BuildCardComponent implements OnInit, OnDestroy {
     this.resizeService.removeResizeEventListener(this.el.nativeElement);
   }
 
-  private isReady(): boolean {
+  public isReady(): boolean {
     return this.buildInfo !== undefined && this.buildInfo !== null;
   }
 

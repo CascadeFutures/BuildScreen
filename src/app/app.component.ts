@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
     this.autoRefresh();
   }
 
-  private callback(event) {
+  public  callback(event) {
     if (event === undefined || event === null || event === '') {
       this.startAutoRefresh();
       return;

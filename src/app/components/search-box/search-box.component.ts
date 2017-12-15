@@ -13,7 +13,7 @@ export class SearchBoxComponent {
 
   constructor() { }
 
-  private searchClick() {
+  public searchClick() {
     this.onSearch.emit(this.searchText);
   }
 
